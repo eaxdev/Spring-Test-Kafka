@@ -11,8 +11,8 @@ import java.lang.annotation.*;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Repeatable(KafkaTestContainers.class)
-public @interface KafkaTestContainer {
+@Repeatable(EnableKafkaTestContainers.class)
+public @interface EnableKafkaTestContainer {
 
     /**
      * @return In this property will be set the value for establishing the initial

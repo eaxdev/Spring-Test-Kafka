@@ -1,7 +1,7 @@
 package com.testtool.springtestkafka.customizer;
 
-import com.testtool.springtestkafka.KafkaTestContainer;
-import com.testtool.springtestkafka.KafkaTestContainers;
+import com.testtool.springtestkafka.EnableKafkaTestContainer;
+import com.testtool.springtestkafka.EnableKafkaTestContainers;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.test.context.ContextConfigurationAttributes;
 import org.springframework.test.context.ContextCustomizer;
@@ -21,9 +21,9 @@ public class PropertyMutationContextCustomizerFactory implements ContextCustomiz
     public ContextCustomizer createContextCustomizer(Class<?> testClass,
                                                      List<ContextConfigurationAttributes> configAttributes) {
 
-        Set<KafkaTestContainer> annotations = AnnotationUtils.getRepeatableAnnotations(testClass,
-                KafkaTestContainer.class,
-                KafkaTestContainers.class);
+        Set<EnableKafkaTestContainer> annotations = AnnotationUtils.getRepeatableAnnotations(testClass,
+                EnableKafkaTestContainer.class,
+                EnableKafkaTestContainers.class);
         Set<KafkaContainerDescription> descriptions = annotations.stream()
                 .map(a -> new KafkaContainerDescription(a.kafkaBootstrapServersTargetProperty()))
                 .collect(Collectors.toSet());
