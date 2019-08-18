@@ -1,6 +1,7 @@
 # Spring Test Kafka
 
 [![Build Status](https://travis-ci.com/eaxdev/Spring-Test-Kafka.svg?branch=master)](https://travis-ci.com/eaxdev/Spring-Test-Kafka)
+[![codecov](https://codecov.io/gh/eaxdev/Spring-Test-Kafka/branch/master/graph/badge.svg)](https://codecov.io/gh/eaxdev/Spring-Test-Kafka)
 
 Write your integration tests of Spring Framework with Kafka.
 
