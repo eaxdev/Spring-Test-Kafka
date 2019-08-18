@@ -23,9 +23,9 @@ class KafkaTestContainerTest {
 }
 ```
 
-You can use this annotation to start Redis container in tests both with `JUnit5` and `JUnit4`. 
+You can use this annotation to start Kafka container in tests both with `JUnit5` and `JUnit4`. 
 The implementation doesn’t depend on some test framework, just on the Spring Framework.
-How to use multiple Redis containers in the one test case:
+How to use multiple Kafka containers in the one test case:
 
 ```java
 @SpringBootTest
